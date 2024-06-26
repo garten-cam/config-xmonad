@@ -2,3 +2,4 @@
 /xmonad-contrib/
 /xmobar/
 /stack*
+/.stack*
