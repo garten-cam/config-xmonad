@@ -30,10 +30,10 @@ main = xmonad
 
 myConfig = def
     { modMask = mod4Mask
-		, borderWidth = 4
+		, borderWidth = 2
 		, terminal = "kitty"
-		, normalBorderColor = "#A89984"
-		, focusedBorderColor = "#458588"
+		, normalBorderColor = "#F0C6C6"
+		, focusedBorderColor = "#a6e3a1"
 		, layoutHook = spacingWithEdge 5 . smartBorders $ layoutHook def
 		, manageHook = namedScratchpadManageHook scratchpads
 		, workspaces = myWorkspaces
@@ -64,22 +64,23 @@ myConfig = def
 myXmobarPP :: PP
 myXmobarPP = def
     { ppSep             = green " • "
-    , ppCurrent         = blue . wrap " " ""
-    , ppHidden          = yellow . wrap " " ""
+    , ppCurrent         = green . wrap " " ""
+    , ppHidden          = peach . wrap " " ""
     , ppHiddenNoWindows = lowWhite . wrap " " ""
     , ppUrgent          = red . wrap (yellow "!") (yellow "!")
     -- , ppOrder           = \[ws, l, _, wins] -> [ws, l, wins]
-    , ppOrder           = \[ws, l, _, win] -> [ws, l, win]
-    , ppExtras          = [logClassnames blue yellow]
+    , ppOrder           = \[ws, l, _] -> [ws]
+    -- , ppExtras          = [logClassnames blue yellow]
     }
   where
-    blue, lowWhite, green, red, white, yellow :: String -> String
-    green  = xmobarColor "#98971A" ""
-    blue     = xmobarColor "#458588" ""
-    white    = xmobarColor "#f8f8f2" ""
-    yellow   = xmobarColor "#D79921" ""
-    red      = xmobarColor "#ff5555" ""
-    lowWhite = xmobarColor "#bbbbbb" ""
+    blue, lowWhite, green, peach, red, white, yellow :: String -> String
+    green  = xmobarColor "#a6e3a1" ""
+    blue     = xmobarColor "#89B4FA" ""
+    white    = xmobarColor "#CDD6F4" ""
+    yellow   = xmobarColor "#FAB387" ""
+    peach      = xmobarColor "#FAB387" ""
+    red      = xmobarColor "#F38BA8" ""
+    lowWhite = xmobarColor "#bbbbbb" "" 
 
 -- scratchpad config
 scratchpads :: [NamedScratchpad]
