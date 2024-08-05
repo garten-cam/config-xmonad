@@ -45,7 +45,7 @@ myConfig = def
 		,("M-o", spawn "rofi -show drun")
 		,("M-S-o", spawn "rofi -show run")
 		,("M-S-y", namedScratchpadAction scratchpads "pdfs")
-		,("M-y", namedScratchpadAction scratchpads "obsidian")
+		,("M-y", namedScratchpadAction scratchpads "neorg")
 		,("M-S-u", namedScratchpadAction scratchpads "journal_paper")
 		,("M-w", namedScratchpadAction scratchpads "qutebrowser")]
 		`remapKeysP`
@@ -86,7 +86,7 @@ myXmobarPP = def
 scratchpads :: [NamedScratchpad]
 scratchpads = [
     NS "pdfs" "kitty -T pdfs -e yazi" (title =? "pdfs") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
-		, NS "obsidian" "kitty -T obsidian -d ~/Documents/Vaults/Research -e nvim Tasks.md" (title =? "obsidian") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
+		, NS "neorg" "kitty -T neorg -d ~/Documents/norgtes/ -e nvim Tasks.norg" (title =? "neorg") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
 		, NS "journal_paper" "kitty -T journal_paper -d ~/Documents/ -e yazi" (title =? "journal_paper") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
 		, NS "qutebrowser" "qutebrowser" (className=? "qutebrowser") (customFloating $ W.RationalRect (1/12) (1/12) (5/6) (5/6))
   ]
