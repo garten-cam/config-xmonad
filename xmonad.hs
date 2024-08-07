@@ -86,11 +86,12 @@ myXmobarPP = def
 scratchpads :: [NamedScratchpad]
 scratchpads = [
     NS "pdfs" "kitty -T pdfs -e yazi" (title =? "pdfs") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
-		, NS "neorg" "kitty -T neorg -d ~/Documents/norgtes/ -e nvim Tasks.norg" (title =? "neorg") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
-		, NS "journal_paper" "kitty -T journal_paper -d ~/Documents/ -e yazi" (title =? "journal_paper") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
+		-- , NS "neorg" "kitty -T neorg -d ~/Documents/norgtes/ -e nvim Tasks.norg" (title =? "neorg") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
+		, NS "neorg" "kitty -T neorg -d ~/Documents/norgtes/" (title =? "neorg") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
+		, NS "journal_paper" "kitty -T journal_paper -d ~/Documents/" (title =? "journal_paper") (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
 		, NS "qutebrowser" "qutebrowser" (className=? "qutebrowser") (customFloating $ W.RationalRect (1/12) (1/12) (5/6) (5/6))
   ]
 
 -- Workspaces
 myWorkspaces :: [String]
-myWorkspaces = ["\9679 ","\9680 ","\9681 ","\9682 ","\9683 ","\9684 ","\9685 ","\9686 ","\9687 "]
+myWorkspaces = ["<fn=1>\xf0ca1</fn>","<fn=1>\xf0ca3</fn>","<fn=1>\xf0ca5</fn>","<fn=1>\xf0ca7</fn>","<fn=1>\xf0ca9</fn>","<fn=1>\xf0cab</fn>","<fn=1>\xf0cad</fn>","<fn=1>\xf0caf</fn>","<fn=1>\xf0cb1</fn>"]
